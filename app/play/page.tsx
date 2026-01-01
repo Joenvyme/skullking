@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, ArrowRight, BarChart3 } from 'lucide-react'
+import { BonusEvent } from '@/lib/game/types'
 
 type Phase = 'transition' | 'bidding' | 'results' | 'summary'
 
@@ -60,7 +61,7 @@ export default function PlayPage() {
     }
   }
 
-  const handleResultSubmit = (tricksWon: number, bonuses: Array<{ type: string; count?: number; trumpCount?: number }>) => {
+  const handleResultSubmit = (tricksWon: number, bonuses: BonusEvent[]) => {
     const player = players[currentResultIndex]
     const bid = currentRoundData?.results.find((r) => r.playerId === player.id)?.bid || 0
 
