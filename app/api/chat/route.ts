@@ -133,8 +133,9 @@ Règles de réponse :
 
     // Génération de la réponse avec streaming
     // La clé API est automatiquement lue depuis OPENAI_API_KEY
-    // @ts-expect-error - Conflit de types entre versions de @ai-sdk, mais fonctionne en runtime
+    // Note: Utilisation de 'as any' pour résoudre le conflit de types entre versions de @ai-sdk
     const result = await streamText({
+      // @ts-ignore - Conflit de types entre ai@4.0.0 et @ai-sdk/openai@1.0.0, mais fonctionne en runtime
       model: openaiModel('gpt-4o'),
       system: systemPrompt,
       messages: messages.slice(0, -1).concat({
