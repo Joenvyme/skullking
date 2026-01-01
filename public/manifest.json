@@ -1,0 +1,25 @@
+{
+  "name": "Skull King Score Keeper",
+  "short_name": "Skull King",
+  "description": "Compteur de points pour le jeu de cartes Skull King",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1628",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/Skull_New_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Skull_Old_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

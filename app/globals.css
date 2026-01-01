@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 8%;
+    --foreground: 38 100% 85%;
+    --card: 210 40% 12%;
+    --card-foreground: 38 100% 85%;
+    --popover: 210 40% 12%;
+    --popover-foreground: 38 100% 85%;
+    --primary: 38 100% 50%;
+    --primary-foreground: 210 40% 8%;
+    --secondary: 25 50% 30%;
+    --secondary-foreground: 38 100% 85%;
+    --muted: 210 30% 20%;
+    --muted-foreground: 38 50% 70%;
+    --accent: 38 100% 50%;
+    --accent-foreground: 210 40% 8%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 38 100% 85%;
+    --border: 38 30% 40%;
+    --input: 38 30% 40%;
+    --ring: 38 100% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-pirate-darkBlue text-pirate-cream font-sans;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(26, 41, 66, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .text-pirate-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-pirate {
+    @apply bg-gradient-to-br from-pirate-navy to-pirate-darkBlue rounded-lg border-0;
+    /* Ombre neutre sans effet jaune */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .button-pirate {
+    @apply bg-pirate-gold text-pirate-darkBlue font-pirate font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200;
+  }
+  
+  .button-pirate-secondary {
+    @apply bg-pirate-wood text-pirate-cream font-pirate font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200;
+  }
+  
+  /* Style moderne pour les étiquettes selon les bonnes pratiques du design */
+  .label-pirate {
+    @apply block text-pirate-cream mb-3 font-semibold text-sm tracking-wide;
+    color: rgba(245, 230, 211, 0.95);
+    text-shadow: none !important;
+  }
+  
+  /* Variante avec accent doré pour les labels importants */
+  .label-pirate-accent {
+    @apply block text-pirate-gold mb-3 font-semibold text-sm tracking-wide;
+    text-shadow: none !important;
+  }
+  
+  .shadow-pirate-gold {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1), 0 0 20px rgba(212, 175, 55, 0.05);
+  }
+  
+  .shadow-pirate-gold-sm {
+    box-shadow: 0 0 6px rgba(212, 175, 55, 0.08), 0 0 12px rgba(212, 175, 55, 0.04);
+  }
+}
+
