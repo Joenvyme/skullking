@@ -132,10 +132,9 @@ Règles de réponse :
     }
 
     // Génération de la réponse avec streaming
+    // La clé API est automatiquement lue depuis OPENAI_API_KEY
     const result = await streamText({
-      model: openaiModel('gpt-4o', {
-        apiKey: openaiApiKey,
-      }),
+      model: openaiModel('gpt-4o'),
       system: systemPrompt,
       messages: messages.slice(0, -1).concat({
         role: 'user',
