@@ -103,7 +103,7 @@ export async function POST(req: Request) {
     }
 
     // Construction du prompt système
-    const systemPrompt = `Tu es l'Oracle du Skull King, un assistant expert des règles du jeu de cartes Skull King.
+           const systemPrompt = `Tu es l&apos;Oracle du Skull King, un assistant expert des règles du jeu de cartes Skull King.
 
 Version du jeu : ${gameVersion === 'new' ? 'NOUVELLE' : 'CLASSIQUE'}
 

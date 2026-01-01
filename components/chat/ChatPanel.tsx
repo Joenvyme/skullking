@@ -33,7 +33,7 @@ export function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
       {
         id: 'welcome',
         role: 'assistant',
-        content: `Ahoy matelot ! ⚔️ Je suis l'Oracle du Skull King. Je connais les règles de la version ${
+        content: `Ahoy matelot ! ⚔️ Je suis l&apos;Oracle du Skull King. Je connais les règles de la version ${
           version === 'new' ? 'NOUVELLE' : 'CLASSIQUE'
         } du jeu. Pose-moi tes questions sur les règles, les scores, ou les bonus !`,
       },
@@ -64,7 +64,7 @@ export function ChatPanel({ isOpen, onClose }: ChatPanelProps) {
           <div className="flex items-center justify-between">
             <DialogTitle className="text-2xl font-pirate text-pirate-gold flex items-center gap-2">
               <Skull className="w-6 h-6" />
-              L'Oracle du Skull King
+              L&apos;Oracle du Skull King
             </DialogTitle>
             <Button
               onClick={onClose}
